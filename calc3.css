@@ -1,0 +1,60 @@
+  
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+  body {
+    margin:0; 
+    background: linear-gradient(to right, #F0FFFF, #fff);
+}
+
+  .grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 70px);
+}
+  
+  .grid > button {
+    cursor: pointer;
+    color:floralwhite;
+    font-size: 1.5rem;
+    border: 1px solid darkslategrey;
+    outline: none;
+    background-color: #5F9EA0;
+
+}
+  .grid > button:hover {
+    background-color: #ADD8E6;
+
+}
+  
+  .doublebtn {
+    grid-column: span 2;
+}
+  
+  .result {
+    grid-column: 1/-1;
+    background-color: teal;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+  
+  .output .last-operation {
+    color: darkturquoise;
+    font-size: 1.25rem;
+}
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2rem;
+}
